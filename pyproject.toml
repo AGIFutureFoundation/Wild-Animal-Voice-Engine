@@ -1,0 +1,25 @@
+[project]
+name = "wave-engine"
+version = "0.1.0"
+description = "Wild Animal Voice Engine — decode non-human vocal communication from environmental audio."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.11",
+  "soundfile>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+wave = "wave.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["wave", "wave.ingest", "wave.signal", "wave.models", "wave.pipeline"]
