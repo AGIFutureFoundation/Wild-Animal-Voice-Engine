@@ -1,0 +1,40 @@
+---
+version: "2.0"
+services:
+  perch:
+    image: <YOUR_REGISTRY>/wave-perch-endpoint:latest   # push the built image here
+    expose:
+      - port: 8080
+        as: 80
+        to:
+          - global: true
+    env:
+      - PORT=8080
+      # - PERCH_TOKEN=<set-a-shared-secret>   # optional bearer auth
+profiles:
+  compute:
+    perch:
+      resources:
+        cpu:
+          units: 4
+        memory:
+          size: 16Gi
+        storage:
+          size: 20Gi
+        gpu:
+          units: 1
+          attributes:
+            vendor:
+              nvidia:
+                - model: rtx3090   # widely available on Akash; a100/h100 if needed
+  placement:
+    akash:
+      pricing:
+        perch:
+          denom: uakt
+          amount: 100000
+deployment:
+  perch:
+    akash:
+      profile: perch
+      count: 1
