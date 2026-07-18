@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use WAVE, please cite it as below."
+title: "WAVE — Wild Animal Voice Engine"
+abstract: "An open, MIT-licensed pipeline for turning environmental audio into structured animal-vocalization signals, toward decoding non-human communication."
+type: software
+license: MIT
+repository-code: "https://github.com/WAVETranslator/Wild-Animal-Voice-Engine"
+url: "https://bioacoustics.cloud/"
+authors:
+  - given-names: "AGI Future Foundation"
+    orcid: "https://orcid.org/0009-0004-3540-7860"
+keywords:
+  - bioacoustics
+  - animal communication
+  - superlet transform
+  - foundation models
