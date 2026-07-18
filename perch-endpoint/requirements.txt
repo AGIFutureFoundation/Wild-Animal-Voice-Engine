@@ -1,4 +1,1 @@
 numpy>=1.24
-# For real GPU inference on Akash, uncomment:
-# tensorflow[and-cuda]~=2.20.0
-# git+https://github.com/google-research/perch-hoplite.git
