@@ -2,7 +2,7 @@
 version: "2.0"
 services:
   perch:
-    image: <YOUR_REGISTRY>/wave-perch-endpoint:latest   # push the built image here
+    image: ghcr.io/AGIFutureFoundation/wave-perch-endpoint:latest   # built by CI (.github/workflows/build-perch-endpoint.yml)
     expose:
       - port: 8080
         as: 80
